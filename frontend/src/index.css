@@ -1,0 +1,137 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 30% 96%;
+    --foreground: 220 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 15%;
+
+    --primary: 210 100% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 210 40% 25%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 16% 45%;
+
+    --accent: 210 20% 95%;
+    --accent-foreground: 210 40% 25%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 100% 40%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 224 45% 20%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 224 45% 25%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 224 45% 25%;
+    --sidebar-ring: 210 100% 50%;
+  }
+
+  .dark {
+    --background: 224 45% 15%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 45% 20%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 45% 20%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 224 45% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 224 45% 25%;
+    --muted-foreground: 215 20% 75%;
+
+    --accent: 224 45% 25%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 224 45% 25%;
+    --input: 224 45% 25%;
+    --ring: 210 100% 50%;
+    
+    --sidebar-background: 224 45% 15%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 210 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 224 45% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 224 45% 25%;
+    --sidebar-ring: 210 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .medi-card {
+    @apply bg-card text-card-foreground rounded-xl shadow-card transition-all duration-200 hover:shadow-card-hover;
+  }
+  
+  .medi-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring;
+  }
+  
+  .medi-button-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground shadow-sm transition-colors hover:bg-secondary/80 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring;
+  }
+  
+  .medi-button-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-input bg-background px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring;
+  }
+  
+  .medi-avatar {
+    @apply flex h-10 w-10 items-center justify-center rounded-full bg-medical-200 text-medical-700 font-semibold;
+  }
+  
+  .table-row-hover {
+    @apply hover:bg-muted/50 transition-colors;
+  }
+  
+  .status-chip {
+    @apply px-2 py-0.5 rounded-full text-xs font-medium text-white;
+  }
+  
+  .status-chip-active {
+    @apply bg-status-success;
+  }
+  
+  .status-chip-inactive {
+    @apply bg-status-error;
+  }
+  
+  .tab-active {
+    @apply border-b-2 border-primary text-primary font-medium;
+  }
+}

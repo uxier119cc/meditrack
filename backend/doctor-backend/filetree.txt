@@ -1,0 +1,60 @@
+Folder PATH listing for volume OS
+Volume serial number is EE56-EE2E
+
+doctor-backend
+|   .env
+|   dev.md
+|   filetree.txt
+|   index.js
+|   package-lock.json
+|   package.json
+|   
++---src
+|   +---config
+|   |       db.js
+|   |       
+|   +---controllers
+|   |       authController.js
+|   |       labReportController.js
+|   |       nurseController.js
+|   |       patientController.js
+|   |       prescriptionController.js
+|   |       
+|   +---middleware
+|   |       authMiddleware.js
+|   |       uploadMiddleware.js
+|   |       
+|   +---models
+|   |       Doctor.js
+|   |       LabReport.js
+|   |       Nurse.js
+|   |       Patient.js
+|   |       Prescription.js
+|   |       
+|   \---routes
+|           authRoutes.js
+|           labReportRoutes.js
+|           nurseRoutes.js
+|           patientRoutes.js
+|           prescriptionRoutes.js
+|           
+\---uploads
+    +---lab-reports
+    |       1745301013215-SEM3-HTC.pdf
+    |       1745301044843-SEM3-HTC.pdf
+    |       1745480780286-SEM3-HTC.pdf
+    |       
+    +---patient-documents
+    \---prescriptions
+            prescription_67ee616107269dbcccb0ab85_1743963537486.pdf
+            prescription_67f64167d94bf629e45e248a_1744728223410.pdf
+            prescription_67f64167d94bf629e45e248a_1744728540768.pdf
+            prescription_67f64167d94bf629e45e248a_1744728547896.pdf
+            prescription_67f64167d94bf629e45e248a_1744728554796.pdf
+            prescription_67f64167d94bf629e45e248a_1744728560065.pdf
+            prescription_6807186431ef5664c63a281b_1745301532248.pdf
+            prescription_680718b831ef5664c63a283b_1745298354330.pdf
+            prescription_680718b831ef5664c63a283b_1745298500956.pdf
+            prescription_680718b831ef5664c63a283b_1745301200181.pdf
+            prescription_68099988187a88f059fb3175_1745480146115.pdf
+            
