@@ -20,7 +20,7 @@ app.use(express.json());
 
 // Make sure your CORS configuration looks like this:
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:8080'],
+  origin: ['http://localhost:3000', 'http://localhost:8080','https://meditrack-h5t5.onrender.com'],
   credentials: true
 }));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
@@ -40,7 +40,8 @@ app.use((err, req, res, next) => {
 });
 
 const PORT = process.env.PORT || 5000;
+const HOST = '0.0.0.0';
 
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
   console.log(`Server running on port ${PORT}`);
 });
